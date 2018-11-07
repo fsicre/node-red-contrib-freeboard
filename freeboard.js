@@ -77,7 +77,7 @@ module.exports = function(RED) {
 	RED.httpNode.use(bodyParser.urlencoded({
 		extended: true
 	}));
-	RED.httpNode.use("/freeboard",express.static(__dirname + '/node_modules/freeboard'));
+	RED.httpNode.use("/freeboard",express.static(__dirname + '/../freeboard/freeboard'));
 	RED.httpNode.get("/freeboard_api/datasources",
 		function (req,res){
 			res.write(dslib);
